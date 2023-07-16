@@ -142,13 +142,13 @@
      <!-- Nav Item - Dashboard -->
      <li class="nav-item {{ Request::path() === 'laporan' ? 'active' : '' }}">
          <a class="nav-link" href="/admin/laporan">
-             <i class="fas fa-fw fa-tachometer-alt"></i>
+             <i class="fas fa-fw fa-file"></i>
              <span>Laporan Penjualan</span></a>
      </li>
 
      <li class="nav-item {{ Request::path() === 'admin/contact' ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('contact') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-user"></i>
             <span>Bantuan</span></a>
     </li>
 

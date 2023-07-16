@@ -33,7 +33,6 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::get('/',[WelcomeController::class, 'index'])->name('home');
 Route::get('/home',[WelcomeController::class, 'index'])->name('home2');
-Route::get('/kontak',[WelcomeController::class, 'kontak'])->name('kontak');
 Route::get('/produk',[ProdukController::class, 'index'])->name('user.produk');
 Route::get('/produk/cari',[ProdukController::class, 'cari'])->name('user.produk.cari');
 Route::get('/kategori/{id}',[KategoriController::class, 'produkByKategori'])->name('user.kategori');
@@ -86,8 +85,6 @@ Route::group(['middleware' => ['auth','checkRole:admin']],function(){
     Route::get('/admin/rekening/delete/{id}',[RekeningController::class, 'delete'])->name('admin.rekening.delete');
     Route::post('/admin/rekening/update/{id}',[RekeningController::class, 'update'])->name('admin.rekening.update');
 
-    Route::get('/admin/pelanggan',[PelangganController::class, 'index'])->name('admin.pelanggan');
-    Route::get('/admin/customer',[PelangganController::class, 'customer'])->name('admin.customer');
     Route::get('/admin/laporan', [LaporanController::class, 'index']);
 
     Route::get('/administrator', [AdminController::class, 'index']);
@@ -96,6 +93,9 @@ Route::group(['middleware' => ['auth','checkRole:admin']],function(){
     Route::get('/administrator/{id}/edit', [AdminController::class, 'show']);
     Route::put('/administrator/{id}', [AdminController::class, 'update']);
     Route::delete('/administrator/{id}', [AdminController::class, 'destroy']);
+
+    Route::get('/admin/customer',[PelangganController::class, 'customer'])->name('admin.customer');
+    Route::get('users/{id}/order', [PelangganController::class, 'detail'])->name('customer.order.detail');
 });
 
 Route::group(['middleware' => ['auth','checkRole:customer']],function(){
@@ -119,6 +119,7 @@ Route::group(['middleware' => ['auth','checkRole:customer']],function(){
     Route::get('/order/pesanandibatalkan/{id}',[OrderController::class, 'pesanandibatalkan'])->name('user.order.pesanandibatalkan');
     Route::get('/order/pembayaran/{id}',[OrderController::class, 'pembayaran'])->name('user.order.pembayaran');
     Route::post('/order/kirimbukti/{id}',[OrderController::class, 'kirimbukti'])->name('user.order.kirimbukti');
+
 });
 
 Route::get('contact', [ContactController::class, 'index'])->name('contact.index');

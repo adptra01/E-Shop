@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{{ $title }} | {{App\Alamat_toko::first()->name_store}}</title>
+    <title>{{ $title }} | {{ App\Alamat_toko::first()->name_store }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="/layouts/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -24,13 +24,12 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.dataTables.min.css">
 
-
-
+    @yield('css')
 </head>
 
 <body id="page-top">
-
     <!-- Page Wrapper -->
+    <x-datetarget></x-datetarget>
     <div id="wrapper">
 
         <x-navbar></x-navbar>
@@ -128,7 +127,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth()->user()->name }}</span>
+                                <span
+                                    class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth()->user()->name }}</span>
                                 <img class="img-profile rounded-circle"
                                     src="https://api.dicebear.com/6.x/big-ears-neutral/svg" alt="avatar" /> </a>
                             </a>

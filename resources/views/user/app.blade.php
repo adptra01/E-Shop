@@ -35,13 +35,11 @@
             overflow: hidden;
             position: relative;
             object-fit: cover;
-
         }
     </style>
 </head>
-
 <body>
-
+<x-datetarget></x-datetarget>
     <div class="site-wrap">
         <header class="site-navbar" role="banner">
             <div class="site-navbar-top">

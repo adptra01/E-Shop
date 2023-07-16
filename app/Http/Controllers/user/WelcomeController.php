@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Product;
 use Illuminate\Support\Facades\DB;
 
 class WelcomeController extends Controller
@@ -20,8 +18,5 @@ class WelcomeController extends Controller
         return view('user.display2', $data);
     }
 
-    public function kontak()
-    {
-        return view('user.kontak');
-    }
+    
 }

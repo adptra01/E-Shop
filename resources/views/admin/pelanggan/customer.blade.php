@@ -26,14 +26,17 @@
                         <th>No.</th>
                         <th>Nama Pelanggan</th>
                         <th>Email</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($customer as $no => $pel)
+                    @foreach ($customer as $no => $item)
                         <tr>
                             <td>{{ ++$no }}</td>
-                            <td>{{ $pel->name }}</td>
-                            <td>{{ $pel->email }}</td>
+                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->email }}</td>
+                            <td><a class="btn btn-primary btn-sm" href="{{ Route('customer.order.detail', $item->id) }}"
+                                    role="button">Detail</a></td>
                         </tr>
                     @endforeach
                 </tbody>
