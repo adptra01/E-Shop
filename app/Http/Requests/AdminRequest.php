@@ -26,7 +26,6 @@ class AdminRequest extends FormRequest
         return [
             'name' => 'required|min:5',
             'email' => 'required|email|unique:users,email,'.$this->id,
-            'password' => 'required',
         ];
     }
 }

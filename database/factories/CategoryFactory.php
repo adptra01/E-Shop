@@ -8,6 +8,6 @@ use Faker\Generator as Faker;
 
 $factory->define(Categories::class, function (Faker $faker) {
     return [
-        'name' => $faker->name(),
+        'name' => $faker->sentence(1),
     ];
 });

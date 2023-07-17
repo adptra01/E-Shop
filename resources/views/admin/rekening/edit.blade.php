@@ -40,6 +40,9 @@
                     <div class="form-group col-md-6">
                         <label for="exampleInputUsername1">Nama Bank <small class="text-success">Baru</small></label>
                         <input type="text" class="form-control" name="bank_name" value="{{ old('bank_name') }}">
+                        @error('bank_name')
+                            <small class="text-danger fw-bold">{{ $message }}</small>
+                        @enderror
                     </div>
                 </div>
                 <div class="form-row">
@@ -50,6 +53,9 @@
                     <div class="form-group col-md-6">
                         <label for="exampleInputUsername1">Atas Nama <small class="text-success">Baru</small></label>
                         <input type="text" class="form-control" name="atas_nama" value="{{ old('atas_nama') }}">
+                        @error('atas_nama')
+                            <small class="text-danger fw-bold">{{ $message }}</small>
+                        @enderror
                     </div>
                 </div>
                 <div class="form-row">
@@ -60,6 +66,9 @@
                     <div class="form-group col-md-6">
                         <label for="exampleInputUsername1">No Rekening <small class="text-success">Baru</small></label>
                         <input type="number" class="form-control" name="no_rekening" value="{{ old('no_rekening') }}">
+                        @error('no_rekening')
+                            <small class="text-danger fw-bold">{{ $message }}</small>
+                        @enderror
                     </div>
                     <div class="text-right">
                         <a href="/admin/rekening" class="btn btn-secondary"><i class="fa fa-times"

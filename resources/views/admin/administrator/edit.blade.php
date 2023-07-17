@@ -2,7 +2,7 @@
     <x-slot name="title">
         Administrator
     </x-slot>
-    <div class="container">
+    <div class="container-fluid">
         <h1 class="h3 mb-2 text-gray-800 font-weight-bold">ADMIN TOKO <small>/ {{ $admin->name }}</small></h1>
         @if ($errors->any())
             <div class="alert alert-danger shadow" role="alert">
@@ -24,7 +24,6 @@
         </div>
         @endif
     </div>
-
     <div class="card shadow m-4">
         <div class="card-header font-weight-bold text-center">UBAH DATA ADMIN</div>
         <div class="card-body">

@@ -2,7 +2,7 @@
     <x-slot name="title">
         Informasi Toko
     </x-slot>
-    <div class="container">
+    <div class="container-fluid">
         <h1 class="h3 mb-2 text-gray-800 font-weight-bold">INFORMASI TOKO</h1>
         @if (session('success'))
             <div class="alert alert-primary" role="alert">

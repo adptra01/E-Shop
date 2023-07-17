@@ -26,7 +26,7 @@ class RekeningRequest extends FormRequest
         return [
                 'bank_name' => 'required|min:3|',
                 'atas_nama' => 'required|min:5|',
-                'no_rekening' => 'required|min:13|max:19|unique:rekenings,no_rekenings'.$this->id,
+                'no_rekening' => 'required|min:10|unique:rekening,no_rekening',
         ];
     }
 }

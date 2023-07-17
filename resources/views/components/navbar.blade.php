@@ -131,7 +131,7 @@
              <div class="bg-white py-2 collapse-inner rounded">
                  <h6 class="collapse-header">Toko</h6>
                  <a class="collapse-item" href="{{ route('admin.rekening') }}">No. Rekening</a>
-                 <a class="collapse-item" href="{{ route('admin.pengaturan.alamat') }}">Alamat toko</a>
+                 <a class="collapse-item" href="{{ route('admin.pengaturan.alamat') }}">Informasi toko</a>
              </div>
          </div>
      </li>

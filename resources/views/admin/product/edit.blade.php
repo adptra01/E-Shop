@@ -2,7 +2,7 @@
     <x-slot name="title">
         Produk Toko
     </x-slot>
-    <div class="container">
+    <div class="container-fluid">
         <h1 class="h3 mb-2 text-gray-800 font-weight-bold">PRODUK TOKO <small>/ {{ $product->name }}</small></h1>
         <div class="media bg-primary rounded mb-3 text-white p-3">
             <img class="align-self-center mr-3" width="230px" src="/layouts/drawKit/vector (2).svg" alt="Generic placeholder image">

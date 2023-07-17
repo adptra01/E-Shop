@@ -48,7 +48,7 @@ class ProductController extends Controller
             $data->image = $imagePath;
             $data->save();
         }
-        return redirect()->route('admin.product')->with('status', 'Berhasil Menambah Produk Baru');
+        return redirect()->route('admin.product')->with('success', 'Berhasil Menambah Produk Baru');
     }
 
     public function edit(Product $id)
@@ -83,7 +83,7 @@ class ProductController extends Controller
         
         $prod->update();
 
-        return redirect()->route('admin.product')->with('status', 'Berhasil Mengubah Produk');
+        return redirect()->route('admin.product')->with('success', 'Berhasil Mengubah Produk');
     }
 
     public function delete(Product $id)
@@ -93,6 +93,6 @@ class ProductController extends Controller
         Storage::delete('imageproducts/' . $id->image);
         $id->delete();
 
-        return redirect()->route('admin.product')->with('status', 'Berhasil Menghapus Produk');
+        return redirect()->route('admin.product')->with('success', 'Berhasil Menghapus Produk');
     }
 }

@@ -80,7 +80,6 @@ Route::group(['middleware' => ['auth','checkRole:admin']],function(){
 
     Route::get('/admin/rekening',[RekeningController::class, 'index'])->name('admin.rekening');
     Route::get('/admin/rekening/edit/{id}',[RekeningController::class, 'edit'])->name('admin.rekening.edit');
-    Route::get('/admin/rekening/tambah',[RekeningController::class, 'tambah'])->name('admin.rekening.tambah');
     Route::post('/admin/rekening/store',[RekeningController::class, 'store'])->name('admin.rekening.store');
     Route::get('/admin/rekening/delete/{id}',[RekeningController::class, 'delete'])->name('admin.rekening.delete');
     Route::post('/admin/rekening/update/{id}',[RekeningController::class, 'update'])->name('admin.rekening.update');

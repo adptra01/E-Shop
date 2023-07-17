@@ -2,7 +2,7 @@
     <x-slot name="title">
         Pelanggan
     </x-slot>
-    <div class="container">
+    <div class="container-fluid">
         <div class="media bg-primary rounded mb-3 text-white p-3">
             <img class="align-self-center mr-3" width="230px" src="/layouts/drawKit/vector (3).svg"
                 alt="Generic placeholder image">
